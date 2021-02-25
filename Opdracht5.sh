@@ -13,4 +13,5 @@ read score4
 printf "Score 5: "
 read score5
 
-printf "Gemiddelde score: %.1f\n" $(echo "scale=2; ($score1 + $score2) / 2" | bc )
+avg=$(echo "scale=2; ($score1 + $score2 + $score3 + $score4 + $score5) / 5" | bc )
+printf "Gemiddelde score: %.1f\n" ${avg/./,}
